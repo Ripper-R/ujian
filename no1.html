@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Drawing Tools</h1>
+    <p>1. Segitiga Rata Kiri</p>
+    <p>2. Persegi</p>
+    <p>3. Segitiga Rata kanan</p>
+    <p>Jenis Bangunan</p>
+    
+    <p><input type="number" id='Jenis'></p>
+    <p>Ukuran</p>
+    <p><input type="number" id='Ukuran' ></p>
+    <input type="button" onclick='tri()'value='lihat' >
+    <p id='out'></p>
+    <br>
+</body>
+<script>
+    // console.log (x,y)
+    const tri=()=>{
+        var x=document.getElementById('Jenis').value;
+        var y=document.getElementById('Ukuran').value;
+        var z=''
+        if(x==1){
+        for(let i=0; i<y; i++){
+            for(let j=0; j<=i; j++){
+            z+="*&nbsp " 
+            }
+             z+="<br>"
+            }
+            return document.getElementById('out').innerHTML=z
+            
+            }else if(x==2){
+        for(let i=0; i<y; i++){
+            for(let j=0; j<=y; j++){
+            z+="*" 
+            }
+             z+="<br>"
+            }
+            return document.getElementById('out').innerHTML=z
+            
+            }else if(x==3){
+                for(var i=1; i<y; i++){
+    for(var k=1; k<=( y-i ); k++)
+    {z+="&nbsp&nbsp&nbsp&nbsp"
+    }
+    for(var j=1; j<=i; j++){
+    z+="*&nbsp " 
+    }z+="<br>"
+    } 
+    return document.getElementById('out').innerHTML=z
+    }
+           
+}
+</script>
+</html>
